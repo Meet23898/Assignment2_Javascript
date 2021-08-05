@@ -1,0 +1,22 @@
+<h1>Edit Employee </h1>
+
+
+<form method="post">
+    <div class="form-group">
+      <label for="fullName" class="form-label mt-4">Employee Name </label>
+      <input name="fullName" type="text" class="form-control" id="fullName" value="{{project.fullName}}">
+    </div>
+    <div class="form-group">
+      <label for="email" class="form-label mt-4">Employee Email </label>
+      <input name="email" type="text" class="form-control control-label" id="email" value="{{project.email}}">
+    </div>
+     <div class="form-group">
+      <label for="mobile" class="form-label mt-4">Mobile No: </label>
+      <input name="mobile" type="text" class="form-control control-label" id="mobile" value="{{project.mobile}}">
+    </div>
+     <div class="form-group">
+      <label for="city" class="form-label mt-4">City </label>
+      <input name="city" type="text" class="form-control control-label" id="city" value="{{project.city}}">
+    </div>
+    <button type="submit" class="btn btn-outline-success mt-4">Edit Employee</button>
+</form>
