@@ -2,11 +2,18 @@ const express = require('express');
 const router = express.Router();
 const projectModel = require('../models/employee_model'); // adding model reference 
 const passport = require('passport')
-// router.get('/index', (req, res, next) => {
-//     res.render('Projects/index', {title: 'test app'});
-// })
 
-router.get('/add', (req, res, next) => {
+
+function isLoggedin(req,res,next){
+    if(req.isAuthenticated()){
+        return next()
+    }
+    res.redirect('/login')
+
+}
+
+
+router.get('/add',isLoggedin, (req, res, next) => {
     res.render('Projects/add', {title: 'Project add page'});
 })
 
@@ -24,7 +31,7 @@ router.get('/delete/:_id', (req, res, next) => {
 
 
 // post of Project/add
-router.post('/add', (req, res, next) => {
+router.post('/add',(req, res, next) => {
     // using the project Model to save the data 
     projectModel.create({
         fullName:req.body.fullName,
