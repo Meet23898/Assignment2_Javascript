@@ -1,20 +1,22 @@
-<h1>Register</h1>
+<h1 style="text-align: center;">Employee Register</h1>
 
 <form method="post">
-    <fieldset class="form-group">
-        <label for="username" class="col-2 control-label">Username: *</label>
-        <input name="username" id="username" required type="email"
-               placeholder="email@email.com" />
+  <fieldset class="form-group col-sm-3 mx-auto">
+        <label for="username" class="col-2 control-label">Username</label>
+        <input class = "form-control" type= "email" name="username" id="username" required placeholder="email@email.com" />
     </fieldset>
-    <fieldset class="form-group">
-        <label for="password" class="col-2 control-label">Password: *</label>
-        <input name="password" id="password" type="password" required>
-    </fieldset>
-    <fieldset class="form-group">
-        <label for="confirm" class="col-2 control-label">Confirm: *</label>
-        <input name="confirm" id="confirm" type="password" required>
-    </fieldset>
-    <fieldset class="form-group">
+
+<fieldset class="form-group col-sm-3 mx-auto">
+        <label for="Password">Password</label>
+        <input  class = "form-control" name="password" id="password" class="form-control" type="password" required />
+    </fieldset> 
+
+    <fieldset class="form-group col-sm-3 mx-auto">
+        <label for="confirm">confirm</label>
+        <input  class = "form-control" name="confirm" id="confirm" class="form-control" type="password" required />
+    </fieldset> 
+
+    <fieldset class="form-group col-sm-2 mx-auto">
         <button class="btn btn-info offset-3">Register</button>
         <hr />
         Already have an account?  <a href="/login" title="Login">Login</a>

@@ -1,25 +1,25 @@
-<h1>Login</h1>
+<h1 style="text-align: center;">Employee Login</h1>
 
 {{#if messages}}
     <div class="alert alert-danger">
         Invalid Login
     </div>
 {{else}}
-    <div class="alert alert-info">
+    <div class="alert alert-info col-sm-3 mx-auto">
         Please enter your Credentials
     </div>
 {{/if}}
 
 <form method="post">
-    <fieldset class="form-group">
-        <label for="username" class="col-2 control-label">Username: *</label>
-        <input name="username" id="username" required />
+    <fieldset class="form-group col-sm-3 mx-auto">
+        <label for="username" class="col-2 control-label">Username</label>
+        <input class = "form-control" name="username" id="username" required />
     </fieldset>
-    <fieldset class="form-group">
-        <label for="password" class="col-2 control-label">Password: *</label>
-        <input name="password" id="password" type="password" required />
+    <fieldset class="form-group col-sm-3 mx-auto">
+        <label for="Password">Password</label>
+        <input  class = "form-control" type="password" name="password" class="form-control" required/>
     </fieldset>
-    <fieldset class="form-group">
+    <fieldset class="form-group col-sm-2 mx-auto">
         <button class="btn btn-info offset-3">Login</button> 
         <hr />
         Need an account?  <a href="/register" title="Register">Register</a>
