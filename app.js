@@ -10,6 +10,27 @@ var aboutRouter = require('./routes/about');
 var projectRouter = require('./routes/project')
 
 var app = express();
+// Authenti 
+const passport = require('passport')
+const session = require('express-session')
+
+app.use(session({
+  secret: 'Meet@260',
+  resave: false, 
+  saveUninitialized: false
+}))
+
+app.use(passport.initialize())
+app.use(passport.session())
+
+const User = require('./models/user');
+
+// use static auth
+passport.use(User.createStrategy());
+
+// serialize and deseralize model 
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
