@@ -64,7 +64,7 @@ router.get('/index', (req, res, next) => {
         }else {
             // loading the index view 
             res.render('Projects/index', {
-                title: 'Displaying Data',
+                title: 'Displaying Employee Data',
                 project: Projects,
                 user: req.user
             })
