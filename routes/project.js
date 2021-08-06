@@ -4,6 +4,8 @@ const projectModel = require('../models/employee_model'); // adding model refere
 const passport = require('passport')
 
 
+
+
 function isLoggedin(req,res,next){
     if(req.isAuthenticated()){
         return next()

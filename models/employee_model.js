@@ -15,6 +15,9 @@ var projectSchema = new mongoose.Schema({
     },
     city: {
         type: String
+    },
+    image: {
+        type: String
     }
 });
 
